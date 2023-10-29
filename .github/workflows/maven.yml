@@ -16,7 +16,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - uses: actions/checkout@v3
@@ -28,5 +28,3 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file Recipe-Management-System/pom.xml
-
-    
